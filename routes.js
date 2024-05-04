@@ -1,11 +1,12 @@
-import exp from "constants";
+
 import express from "express";
 
-const router=express.Router();
+const router = express.Router();
+
 
 
 router.post("/submit",(req,res)=>{
-    
-    return res.send("Form Submitted successfully");
-});
+  console.log(req.body);
+  return res.status(200).send("Form Submitted successfully")
+})
 export default router;
